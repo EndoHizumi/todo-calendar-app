@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO & カレンダーアプリ（編集・並べ替え機能付き）</title>
+    <link rel="stylesheet" href="todo-calendar-app.css">
+    <!-- 既存のリンクと scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+    <script src="todo-calendar-app.js" defer></script>
+</head>
+
+<body>
+    <div id="todo-list">
+        <h2>TODOリスト</h2>
+        <input type="text" id="todo-input" placeholder="新しいタスクを入力してEnterを押す">
+        <div id="todo-items" style="height: 80vh;overflow-y:scroll">
+            <div></div>
+        </div>
+    </div>
+    <div id="calendar-container">
+        <div id="calendar"></div>
+        <div id="event-sidebar">
+            <h3>イベント詳細</h3>
+            <input type="text" id="event-title" placeholder="タイトル">
+            <textarea id="event-description" placeholder="説明"></textarea>
+            <input type="datetime-local" id="event-start">
+            <input type="datetime-local" id="event-end">
+            <input type="color" id="event-color">
+            <button id="save-event">保存</button>
+            <button id="delete-event">削除</button>
+            <button id="return-to-todo">TODOリストに戻す</button>
+        </div>
+    </div>
+</body>
+
+</html>

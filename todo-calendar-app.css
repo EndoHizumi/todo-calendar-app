@@ -1,0 +1,146 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+#todo-list {
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+}
+
+#todo-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#calendar-container {
+  flex-grow: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar {
+  flex-grow: 1;
+  width: 100%;
+}
+
+#event-sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.todo-item-content,
+.subtask-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.todo-text,
+.subtask-text {
+  flex-grow: 1;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-item-buttons,
+.subtask-item-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn,
+.add-subtask-btn,
+.edit-btn,
+.add-to-calendar-btn {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.delete-btn:hover {
+  color: #ff4d4d;
+}
+.add-subtask-btn:hover {
+  color: #4caf50;
+}
+.edit-btn:hover {
+  color: #008cba;
+}
+.add-to-calendar-btn:hover {
+  color: #ffa500;
+}
+
+.drag-handle {
+  cursor: move;
+  padding: 5px;
+  margin-right: 10px;
+  color: #888;
+}
+
+.todo-item,
+.subtask-item {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.subtask-item {
+  margin-left: 20px;
+}
+
+/* FullCalendarのスタイル調整 */
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0.5em;
+  padding: 10px;
+}
+
+.fc .fc-view-harness {
+  height: calc(100vh - 50px) !important;
+}
+
+/* スクロールバーのスタイル調整 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
